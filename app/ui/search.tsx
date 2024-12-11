@@ -16,6 +16,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     // Instead of creating a complex string literal,
     // it formats the params string like "?page=1&query=a"
     const params = new URLSearchParams(searchParams);
+    params.set("page", "1");
     // Update the URL address search parameters
     if (term) {
       params.set("query", term);
